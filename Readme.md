@@ -8,20 +8,10 @@ It is designed to be lightweight, easy to use, and modular.
 - **String utilities** (`stringutils`)
   - `Reverse(string) string` → reverses a string
   - `IsPalindrome(string) bool` → checks if a string is a palindrome
-  - `ToSnakeCase(string) string` → converts camelCase to snake_case
 
 - **Math utilities** (`mathutils`)
   - `Sum(numbers ...int) int` → sum of integers
-  - `Average(numbers ...float64) float64` → average of numbers
   - `RandomInt(min, max int) int` → random integer in range
-
-- **Time utilities** (`timeutils`)
-  - `DaysBetween(start, end time.Time) int` → number of days between two dates
-  - `IsWeekend(time.Time) bool` → checks if a date is on the weekend
-
-- **Greet utilities** (`greet`)
-  - `Hello(name string)` → prints a friendly greeting
-  - `Goodbye(name string)` → prints a farewell message
 
 ---
 
@@ -47,7 +37,7 @@ import (
 
 func main() {
 	fmt.Println("Sum:", mathutils.Sum(1, 2, 3, 4))
-	fmt.Println("Average:", mathutils.Average(2.0, 4.0, 6.0))
+	fmt.Println("Random Number:", mathutils.RandomInt(1, 100))
 	fmt.Println("Reverse:", stringutils.Reverse("hello"))
 	fmt.Println("Palindrome:", stringutils.IsPalindrome("madam"))
 }
@@ -56,7 +46,7 @@ func main() {
 ## Output
 ```bash
 Sum: 10
-Average: 4
+Random Number: 73
 Reverse: olleh
 Palindrome: true
 
